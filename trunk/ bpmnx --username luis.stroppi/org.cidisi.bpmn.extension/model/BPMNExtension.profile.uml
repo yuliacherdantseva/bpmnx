@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Profile xmi:id="_KZSUIQiUEeCMu55sYJzBRg" name="BPMNExtension" metaclassReference="_OBuTEAiXEeCMu55sYJzBRg _W7k6IAkPEeCCv_nE_twOlg _B7Zm0H2NEeCWsueptpqFpA _zqMIcIIVEeCAFoZITi7x9w">
+    <elementImport xmi:id="_KaU18AiUEeCMu55sYJzBRg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_Kanw4AiUEeCMu55sYJzBRg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <elementImport xmi:id="_Kanw4QiUEeCMu55sYJzBRg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    </elementImport>
+    <elementImport xmi:id="_Kanw4giUEeCMu55sYJzBRg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <elementImport xmi:id="_OBuTEAiXEeCMu55sYJzBRg">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </elementImport>
+    <elementImport xmi:id="_W7k6IAkPEeCCv_nE_twOlg">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+    </elementImport>
+    <elementImport xmi:id="_B7Zm0H2NEeCWsueptpqFpA">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Enumeration"/>
+    </elementImport>
+    <elementImport xmi:id="_zqMIcIIVEeCAFoZITi7x9w" alias="">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_RhuWcAiUEeCMu55sYJzBRg" name="ExtensionDefinition">
+      <ownedRule xmi:id="__2tyYAlFEeC3AJECZSGfNw" name="only_inherits_from_extension_definitions">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="__2tyYQlFEeC3AJECZSGfNw" name="only_inherits_from_extension_definitions">
+          <language>OCL</language>
+          <body>self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_nRo4kGnFEeCxMYaEkEXa-A" name="is_abstract">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_nRtKAGnFEeCxMYaEkEXa-A" name="is_abstract">
+          <language>OCL</language>
+          <body>self.base_Class.isAbstract = true</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="_tmFTgn2MEeCWsueptpqFpA" name="base_Class" association="_tmFTgH2MEeCWsueptpqFpA">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_VX3EoAkPEeCCv_nE_twOlg" name="ExtensionModel">
+      <ownedRule xmi:id="_Z3LTIAkQEeCCv_nE_twOlg" name="only_has_stereotyped_classes">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_Z3LTIQkQEeCCv_nE_twOlg" name="only_has_stereotyped_classes">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined()))</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_5B3EMH2VEeCrctiYX-LwYw" name="only_has_stereotyped_enumerations">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_5B3EMX2VEeCrctiYX-LwYw" name="only_has_stereotyped_enumerations">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Enumeration) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionEnum').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNEnum').oclIsUndefined()))</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_fCWVkH2SEeCfo8ZD_p0Hyw" name="only_has_stereotyped_classes">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_fCgGkH2SEeCfo8ZD_p0Hyw" name="only_has_stereotyped_classes">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined()))</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_kYCA0H2SEeCfo8ZD_p0Hyw" name="define_extensions">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_kYCA0X2SEeCfo8ZD_p0Hyw" name="define_extensions">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->exists(c | not c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_qhkx8H2SEeCfo8ZD_p0Hyw" name="not_navigable_reference_extension_definition_elements">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_qhkx8X2SEeCfo8ZD_p0Hyw" name="not_navigable_reference_extension_definition_elements">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association) )->forAll(a | a.oclAsType(uml::Association).navigableOwnedEnd->forAll(e | e.type.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_NmIg4H2TEeCGXspSVPG3Zg" name="not_reference_extension_definition_element">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_NmIg4X2TEeCGXspSVPG3Zg" name="not_reference_extension_definition_element">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association))->forAll(a | a.oclAsType(uml::Association).navigableOwnedEnd->isEmpty() implies a.oclAsType(uml::Association).relatedElement->forAll(c | c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_WQKRwH2TEeCGXspSVPG3Zg" name="bpmn_elements_only_reference_bpmn_elements">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_WQKRwX2TEeCGXspSVPG3Zg" name="bpmn_elements_only_reference_bpmn_elements">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association))->forAll(a | a.oclAsType(uml::Association).relatedElement->exists(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined()) implies a.oclAsType(uml::Association).navigableOwnedEnd->forAll(e | not e.type.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined()) or (a.oclAsType(uml::Association).navigableOwnedEnd->isEmpty() and a.oclAsType(uml::Association).relatedElement->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())))</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_oegcEH2UEeCvAaEpMTYMXw" name="only_single_inheritance">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_oeqNEH2UEeCvAaEpMTYMXw" name="only_single_inheritance">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies p.oclAsType(uml::Class).generalization->size() &lt;= 1)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_ZB_1UH2VEeC8DqYp_2BL4g" name="no_extension_definition_attributes">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_ZCI_QH2VEeC8DqYp_2BL4g" name="no_extension_definition_attributes">
+          <language>OCL</language>
+          <body>self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies p.oclAsType(uml::Class).attribute->forAll(a | a.type.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="_eBKVYQkSEeCCv_nE_twOlg" name="base_Package" association="_eBJuUAkSEeCCv_nE_twOlg">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_eBJuUAkSEeCCv_nE_twOlg" name="Package_ExtensionModel" memberEnd="_eBKVYAkSEeCCv_nE_twOlg _eBKVYQkSEeCCv_nE_twOlg">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_eBKVYAkSEeCCv_nE_twOlg" name="extension_ExtensionModel" type="_VX3EoAkPEeCCv_nE_twOlg" aggregation="composite" association="_eBJuUAkSEeCCv_nE_twOlg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_VzpygAlAEeC3AJECZSGfNw" name="BPMNElement">
+      <ownedRule xmi:id="__SWroAlGEeC3AJECZSGfNw" name="only_inherits_from_bpmn_elements">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="__SWroQlGEeC3AJECZSGfNw" name="only_inherits_from_bpmn_elements">
+          <language>OCL</language>
+          <body>self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_kFtgkGnwEeCQ4d8BVJMNdA" name="only_reference_bpmn_elements">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_kF3RkGnwEeCQ4d8BVJMNdA" name="only_reference_bpmn_elements">
+          <language>OCL</language>
+          <body>self.base_Class.ownedAttribute->select(at | at.type.oclIsTypeOf(uml::Class))->forAll(a | not a.type.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="_t7PrMn2MEeCWsueptpqFpA" name="base_Class" association="_t7PrMH2MEeCWsueptpqFpA">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_YDEQYAlAEeC3AJECZSGfNw" name="ExtensionElement">
+      <ownedRule xmi:id="_nmYwIAlHEeC3AJECZSGfNw" name="only_inherits_from_extension_elements">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_nmYwIQlHEeC3AJECZSGfNw" name="only_inherits_from_extension_elements">
+          <language>OCL</language>
+          <body>self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="_uPD_En2MEeCWsueptpqFpA" name="base_Class" association="_uPD_EH2MEeCWsueptpqFpA">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_tmFTgH2MEeCWsueptpqFpA" name="Class_ExtensionDefinition" memberEnd="_tmFTgX2MEeCWsueptpqFpA _tmFTgn2MEeCWsueptpqFpA">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_tmFTgX2MEeCWsueptpqFpA" name="extension_ExtensionDefinition" type="_RhuWcAiUEeCMu55sYJzBRg" aggregation="composite" association="_tmFTgH2MEeCWsueptpqFpA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_t7PrMH2MEeCWsueptpqFpA" name="Class_BPMNElement" memberEnd="_t7PrMX2MEeCWsueptpqFpA _t7PrMn2MEeCWsueptpqFpA">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_t7PrMX2MEeCWsueptpqFpA" name="extension_BPMNElement" type="_VzpygAlAEeC3AJECZSGfNw" aggregation="composite" association="_t7PrMH2MEeCWsueptpqFpA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_uPD_EH2MEeCWsueptpqFpA" name="Class_ExtensionElement" memberEnd="_uPD_EX2MEeCWsueptpqFpA _uPD_En2MEeCWsueptpqFpA">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_uPD_EX2MEeCWsueptpqFpA" name="extension_ExtensionElement" type="_YDEQYAlAEeC3AJECZSGfNw" aggregation="composite" association="_uPD_EH2MEeCWsueptpqFpA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_GqfMIH2NEeCWsueptpqFpA" name="BPMNEnum">
+      <ownedAttribute xmi:id="_K_8wgn2NEeCWsueptpqFpA" name="base_Enumeration" association="_K_8wgH2NEeCWsueptpqFpA">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Enumeration"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_I2tMEH2NEeCWsueptpqFpA" name="ExtensionEnum">
+      <ownedAttribute xmi:id="_LSuikn2NEeCWsueptpqFpA" name="base_Enumeration" association="_LSuikH2NEeCWsueptpqFpA">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Enumeration"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_K_8wgH2NEeCWsueptpqFpA" name="Enumeration_BPMNEnum" memberEnd="_K_8wgX2NEeCWsueptpqFpA _K_8wgn2NEeCWsueptpqFpA">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_K_8wgX2NEeCWsueptpqFpA" name="extension_BPMNEnum" type="_GqfMIH2NEeCWsueptpqFpA" aggregation="composite" association="_K_8wgH2NEeCWsueptpqFpA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_LSuikH2NEeCWsueptpqFpA" name="Enumeration_ExtensionEnum" memberEnd="_LSuikX2NEeCWsueptpqFpA _LSuikn2NEeCWsueptpqFpA">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_LSuikX2NEeCWsueptpqFpA" name="extension_ExtensionEnum" type="_I2tMEH2NEeCWsueptpqFpA" aggregation="composite" association="_LSuikH2NEeCWsueptpqFpA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_ulESwIMHEeC519CZEK0HnA" name="ExtensionRelationship">
+      <ownedRule xmi:id="_wQDN4IMHEeC519CZEK0HnA" name="client_must_be_bpmn_element">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_wQDN4YMHEeC519CZEK0HnA" name="client_must_be_bpmn_element">
+          <language>OCL</language>
+          <body>self.base_Dependency.client->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_2N0z4IMHEeC519CZEK0HnA" name="supplier_must_be_extension_definition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_2N0z4YMHEeC519CZEK0HnA" name="supplier_must_be_extension_definition">
+          <language>OCL</language>
+          <body>self.base_Dependency.supplier->forAll(s | not s.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="__D6q0oMHEeC519CZEK0HnA" name="base_Dependency" association="__D6q0IMHEeC519CZEK0HnA">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="__D6q0IMHEeC519CZEK0HnA" name="Dependency_ExtensionRelationship" memberEnd="__D6q0YMHEeC519CZEK0HnA __D6q0oMHEeC519CZEK0HnA">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="__D6q0YMHEeC519CZEK0HnA" name="extension_ExtensionRelationship" type="_ulESwIMHEeC519CZEK0HnA" aggregation="composite" association="__D6q0IMHEeC519CZEK0HnA"/>
+    </packagedElement>
+    <profileApplication xmi:id="_MRM4AAiUEeCMu55sYJzBRg">
+      <eAnnotations xmi:id="_MRWB8AiUEeCMu55sYJzBRg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Profile>
+  <Ecore:EPackage xmi:id="_Nfcz0AiUEeCMu55sYJzBRg" base_Package="_KZSUIQiUEeCMu55sYJzBRg" packageName="bpmnextension" nsPrefix="bpmnextension" nsURI="http://www.cidisi.org/bpmn/extension" basePackage="org.cidisi.bpmn.extension" prefix="BPMNExtension"/>
+</xmi:XMI>

@@ -1,0 +1,7 @@
+	<xsd:simpleType name="<c:get select="$enumerationType/@name" />">
+	  <xsd:restriction base="xsd:string">
+	  	<c:iterate select="$enumerationType/values" var="value">
+	    	<xsd:enumeration value="<c:get select="$value/@value" />" />
+	    </c:iterate>
+	  </xsd:restriction>
+	</xsd:simpleType>

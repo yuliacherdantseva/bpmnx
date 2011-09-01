@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:bpmnextension="http://www.cidisi.org/bpmn/extension" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML">
+  <uml:Package xmi:id="_T9-wUGqmEeC3oobOh_YqRA" name="WorkDistribution">
+    <elementImport xmi:id="_T-BMkGqmEeC3oobOh_YqRA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_T-BzoGqmEeC3oobOh_YqRA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <elementImport xmi:id="_T-BzoWqmEeC3oobOh_YqRA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    </elementImport>
+    <elementImport xmi:id="_T-BzomqmEeC3oobOh_YqRA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WTDKQGqmEeC3oobOh_YqRA" name="WorkDistribution" isAbstract="true">
+      <ownedAttribute xmi:id="_f9VZYNTBEeCSqaBWyiUFvA" name="distributionAgent" type="_Y0hjYH_tEeCLIP0NzaxGzQ" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_d6UdoGqmEeC3oobOh_YqRA" name="BoundaryEvent"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gC4soGqmEeC3oobOh_YqRA" name="TaskPrivilege">
+      <ownedAttribute xmi:id="_7hPaEH_tEeCLIP0NzaxGzQ" name="name" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_wSUq0NTBEeCSqaBWyiUFvA" name="granted" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ne-qwGqmEeC3oobOh_YqRA" memberEnd="_ne-qwWqmEeC3oobOh_YqRA _ne_R0mqmEeC3oobOh_YqRA" navigableOwnedEnd="_ne_R0mqmEeC3oobOh_YqRA">
+      <ownedEnd xmi:id="_ne-qwWqmEeC3oobOh_YqRA" name="" type="_WTDKQGqmEeC3oobOh_YqRA" association="_ne-qwGqmEeC3oobOh_YqRA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ne_R0WqmEeC3oobOh_YqRA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ne_R0GqmEeC3oobOh_YqRA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ne_R0mqmEeC3oobOh_YqRA" name="distributionTrigger" type="_d6UdoGqmEeC3oobOh_YqRA" association="_ne-qwGqmEeC3oobOh_YqRA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ne_44GqmEeC3oobOh_YqRA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ne_R02qmEeC3oobOh_YqRA"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_U5Ir4H_tEeCLIP0NzaxGzQ" name="UserTask" clientDependency="_Sh0x0IMEEeCJPM4jEN0ZQA">
+      <generalization xmi:id="_6hkigNTAEeCSqaBWyiUFvA" general="_2zqtYNTAEeCSqaBWyiUFvA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_Y0hjYH_tEeCLIP0NzaxGzQ" name="AgentType">
+      <ownedLiteral xmi:id="_bKbDwH_tEeCLIP0NzaxGzQ" name="SYSTEM"/>
+      <ownedLiteral xmi:id="_cFlrgH_tEeCLIP0NzaxGzQ" name="ADMINISTRATOR"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Sh0x0IMEEeCJPM4jEN0ZQA" supplier="_WTDKQGqmEeC3oobOh_YqRA" client="_U5Ir4H_tEeCLIP0NzaxGzQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2zqtYNTAEeCSqaBWyiUFvA" name="Task"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_8XuL0NTAEeCSqaBWyiUFvA" name="Rendering"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="__NISsNTAEeCSqaBWyiUFvA" memberEnd="__NKu8NTAEeCSqaBWyiUFvA __NLWAtTAEeCSqaBWyiUFvA" navigableOwnedEnd="__NLWAtTAEeCSqaBWyiUFvA">
+      <ownedEnd xmi:id="__NKu8NTAEeCSqaBWyiUFvA" name="" type="_U5Ir4H_tEeCLIP0NzaxGzQ" association="__NISsNTAEeCSqaBWyiUFvA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__NLWAdTAEeCSqaBWyiUFvA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__NLWANTAEeCSqaBWyiUFvA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="__NLWAtTAEeCSqaBWyiUFvA" name="renderings" type="_8XuL0NTAEeCSqaBWyiUFvA" aggregation="composite" association="__NISsNTAEeCSqaBWyiUFvA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__NL9EdTAEeCSqaBWyiUFvA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__NL9ENTAEeCSqaBWyiUFvA"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Fg7MANTBEeCSqaBWyiUFvA" value=""/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5GYhcNTBEeCSqaBWyiUFvA" memberEnd="_5GZIgNTBEeCSqaBWyiUFvA _5GZvkdTBEeCSqaBWyiUFvA" navigableOwnedEnd="_5GZvkdTBEeCSqaBWyiUFvA">
+      <ownedEnd xmi:id="_5GZIgNTBEeCSqaBWyiUFvA" name="" type="_WTDKQGqmEeC3oobOh_YqRA" association="_5GYhcNTBEeCSqaBWyiUFvA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5GZvkNTBEeCSqaBWyiUFvA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5GZIgdTBEeCSqaBWyiUFvA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5GZvkdTBEeCSqaBWyiUFvA" name="taskPrivileges" type="_gC4soGqmEeC3oobOh_YqRA" aggregation="composite" association="_5GYhcNTBEeCSqaBWyiUFvA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5GaWoNTBEeCSqaBWyiUFvA" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5GZvktTBEeCSqaBWyiUFvA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_-76xcNTBEeCSqaBWyiUFvA" value=""/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_vzpaMGqnEeC3oobOh_YqRA">
+      <eAnnotations xmi:id="_vztEkGqnEeC3oobOh_YqRA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.cidisi.org/bpmn/extension#/"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/org.cidisi.bpmn.extension/model/BPMNExtension.profile.uml#_KZSUIQiUEeCMu55sYJzBRg"/>
+    </profileApplication>
+  </uml:Package>
+  <bpmnextension:ExtensionDefinitionElement xmi:id="_yDpG4GqnEeC3oobOh_YqRA" base_Class="_WTDKQGqmEeC3oobOh_YqRA"/>
+  <bpmnextension:BPMNElement xmi:id="_0LVzMGqnEeC3oobOh_YqRA"/>
+  <bpmnextension:BPMNElement xmi:id="_1QKtQGqnEeC3oobOh_YqRA"/>
+  <bpmnextension:BPMNElement xmi:id="_2sI8AGqnEeC3oobOh_YqRA" base_Class="_d6UdoGqmEeC3oobOh_YqRA"/>
+  <bpmnextension:ExtensionModel xmi:id="_t6RHoGqwEeCAbqsfU7iUuA" base_Package="_T9-wUGqmEeC3oobOh_YqRA"/>
+  <bpmnextension:ExtensionDefinition xmi:id="_OLr8cH_tEeCLIP0NzaxGzQ" base_Class="_WTDKQGqmEeC3oobOh_YqRA"/>
+  <bpmnextension:BPMNElement xmi:id="_WMlQwH_tEeCLIP0NzaxGzQ" base_Class="_U5Ir4H_tEeCLIP0NzaxGzQ"/>
+  <bpmnextension:ExtensionEnum xmi:id="_Z-4dsH_tEeCLIP0NzaxGzQ" base_Enumeration="_Y0hjYH_tEeCLIP0NzaxGzQ"/>
+  <bpmnextension:ExtensionElement xmi:id="_NXaxcH_uEeCLIP0NzaxGzQ" base_Class="_gC4soGqmEeC3oobOh_YqRA"/>
+  <bpmnextension:ExtensionReference xmi:id="_WQS8oIIdEeC3ydskbOJBxg"/>
+  <bpmnextension:ExtensionReference xmi:id="_w22PgIMEEeC2ppB-0V1FJg" base_Dependency="_Sh0x0IMEEeCJPM4jEN0ZQA"/>
+  <bpmnextension:ExtensionRelationship xmi:id="_ZCu9QIMIEeC6Ya8wrYFUHA" base_Dependency="_Sh0x0IMEEeCJPM4jEN0ZQA"/>
+  <bpmnextension:BPMNElement xmi:id="_5Jf8UNTAEeCSqaBWyiUFvA" base_Class="_2zqtYNTAEeCSqaBWyiUFvA"/>
+  <bpmnextension:BPMNElement xmi:id="_0B-W8NTCEeCSqaBWyiUFvA" base_Class="_8XuL0NTAEeCSqaBWyiUFvA"/>
+</xmi:XMI>
