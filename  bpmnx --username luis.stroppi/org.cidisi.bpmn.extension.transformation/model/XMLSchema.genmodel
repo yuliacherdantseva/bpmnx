@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.cidisi.bpmn.extension.transformation/src"
+    modelPluginID="org.cidisi.bpmn.extension.transformation" modelName="XMLSchema"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>XMLSchema.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Xmlschema" disposableProviderFactory="true" ecorePackage="XMLSchema.ecore#/">
+    <genClasses ecoreClass="XMLSchema.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//Schema/declarations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//Schema/definitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//Schema/targetNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//NotationDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//NotationDeclaration/systemIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//NotationDeclaration/publicIdentifier"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//ElementDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/nillable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/substitutionGroupAffiliation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/substitutionGroupExclussions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/dissallowedSubstitutions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/valueConstraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ElementDeclaration/typeDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//SimpleTypeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//SimpleTypeDefinition/facets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//SimpleTypeDefinition/variety"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//SimpleTypeDefinition/baseTypeDefinition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="XMLSchema.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//NamedElement/targetNamespace"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="XMLSchema.ecore#//Declaration"/>
+    <genClasses image="false" ecoreClass="XMLSchema.ecore#//Definition"/>
+    <genClasses ecoreClass="XMLSchema.ecore#//AttributeDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//AttributeDeclaration/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//AttributeDeclaration/valueConstraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//AttributeDeclaration/typeDefinition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="XMLSchema.ecore#//TypeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//TypeDefinition/final"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//ComplexTypeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ComplexTypeDefinition/derivationMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ComplexTypeDefinition/prohibitedSubstitutions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ComplexTypeDefinition/attributeUses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ComplexTypeDefinition/contentType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ComplexTypeDefinition/baseTypeDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ComplexTypeDefinition/particles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ComplexTypeDefinition/attributeWildcard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ComplexTypeDefinition/isAbstract"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//ModelGroupDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ModelGroupDefinition/modelGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//AttributeGroupDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//AttributeGroupDefinition/attributeUses"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//AttributeUse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//AttributeUse/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//AttributeUse/valueConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//AttributeUse/attributeDeclaration"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//Particle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//Particle/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//Particle/maxOccurs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//Particle/wildcard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//Particle/modelGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//Particle/elementDeclaration"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//ModelGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ModelGroup/compositor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ModelGroup/particles"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//Wildcard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//Wildcard/namespaceConstraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//Wildcard/processContents"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//EnumerationTypeDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//EnumerationTypeDefinition/values"/>
+    </genClasses>
+    <genClasses ecoreClass="XMLSchema.ecore#//EnumerationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//EnumerationValue/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,9 @@
+<c:choose>	
+	<c:when test="count($particles) > 0">
+		<sequence>
+			<c:iterate select="$particles" var="p">
+				<xsd:element name="<c:get select="$p/elementDeclaration/@name" />" type="<c:get select="$p/elementDeclaration/typeDefinition/@name" />"/>
+			</c:iterate>
+		</sequence>
+	</c:when>
+</c:choose>

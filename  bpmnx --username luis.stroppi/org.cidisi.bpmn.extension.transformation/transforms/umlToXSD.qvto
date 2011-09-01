@@ -1,0 +1,234 @@
+modeltype UML2 uses 'http://www.eclipse.org/uml2/3.0.0/UML';
+modeltype XSD uses 'http://xmlschema/1.0';
+
+transformation umlToXSD(in inModel:UML2, out outModel:XSD);
+
+
+main() {
+	inModel.rootObjects()[UML2::Package]->map extensionModelToSchema()->asSequence()->first();
+}
+
+//Main Mapping
+mapping UML2::Package::extensionModelToSchema(): XSD::Schema
+when {not self.getAppliedStereotype('BPMNExtension::ExtensionModel').oclIsUndefined();} 
+{
+	
+	targetNamespace := self.name;
+	
+	//Transform the types defined in the input model.
+	definitions	 := getDatatypeDefinitions(self);
+	definitions  += self.ownedElement[UML2::Enumeration]->map extensionEnumToEnumerationTypeDefinition();
+	definitions  += self.ownedElement[UML2::Class]->map extensionElementToComplexTypeDefinition(self);
+	
+	definitions += self.ownedElement[UML2::Class]->map extensionDefinitionToElementGroup(self);
+
+}
+
+helper getDatatypeDefinitions(p:UML2::Package) : Set(XSD::SimpleTypeDefinition){
+	var td : Set(XSD::SimpleTypeDefinition) = Set{};
+	p.ownedElement[UML2::Class].ownedAttribute.type[PrimitiveType].name->asSet()->forEach(n){
+		td += Set{object XSD::SimpleTypeDefinition{
+			name := "xsd:"+n.toLower();
+		}};
+	};
+	
+	p.ownedElement[UML2::Association].memberEnd->select(pr | not pr.isComposite)->forOne(prop){
+		td += Set{object XSD::SimpleTypeDefinition{
+			name := "xsd:QName";
+		}};
+	};
+	
+	return td;
+}
+
+mapping UML2::Enumeration::extensionEnumToEnumerationTypeDefinition() : XSD::EnumerationTypeDefinition
+when {not self.getAppliedStereotype('BPMNExtension::ExtensionEnum').oclIsUndefined();} 
+{
+	name := self.name;
+	values := self.ownedLiteral[UML2::EnumerationLiteral]->map literalToEnumerationValue();
+}
+
+mapping UML2::EnumerationLiteral::literalToEnumerationValue() : XSD::EnumerationValue{
+	value := self.name;
+}
+
+mapping UML2::Class::extensionElementToComplexTypeDefinition(p:UML2::Package) : XSD::ComplexTypeDefinition
+when {not self.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined();}
+{		
+	name := self.name;	
+	isAbstract := self.isAbstract;
+	attributeUses := self.ownedAttribute[UML2::Property]->map propertyToAttributeUse();
+	baseTypeDefinition := self.generalization.general->asSequence()->at(1).late resolveone(ComplexTypeDefinition);
+	
+	//Create properties for composite associations
+	particles := p.ownedElement[UML2::Association]->select(a |
+		a.relatedElement->includes(self) 
+	).memberEnd->select(me | 
+		me.type != self and
+		me.isComposite and
+		(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty()) 
+	)->map propertyToParticle();
+	
+	//Create properties for shared associations	that CAN be represented by attributes
+	attributeUses += p.ownedElement[UML2::Association]->select(a |
+		a.relatedElement->includes(self) 
+	).memberEnd->select(me | 
+		me.type != self and 
+		(not me.isComposite) and
+		me.upper = 1 and
+		(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty())
+	)->map propertyToQNameAttributeUse();
+	
+	//Create properties for shared associations	that CANNOT be represented by attributes
+	particles += p.ownedElement[UML2::Association]->select(a |
+		a.relatedElement->includes(self) 
+	).memberEnd->select(me |  
+		me.type != self and 
+		(not me.isComposite) and
+		me.upper != 1 and
+		(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty())
+	)->map propertyToQNameParticle();
+	
+}
+
+mapping UML2::Property::propertyToAttributeUse() : XSD::AttributeUse{
+	required := self.lower > 0;
+	attributeDeclaration := self.map propertyToAttributeDeclaration();
+}
+
+mapping UML2::Property::propertyToAttributeDeclaration() : XSD::AttributeDeclaration{
+	name := self.name; 
+	typeDefinition := getDataTypeByName(self.owner.owner[UML2::Package]->asSequence()->at(1), self.type.name);
+}
+
+query getDataTypeByName(in p:UML2::Package, in n:String) : XSD::SimpleTypeDefinition{
+	return p.resolveone(XSD::Schema).definitions[XSD::SimpleTypeDefinition]->select(d | d.name = n or d.name = "xsd:"+n.toLower())->asSequence()->at(1);
+}
+
+mapping UML2::Property::propertyToParticle(): XSD::Particle{
+	minOccurs := self.lower;
+	maxOccurs := self.upper;
+	elementDeclaration := self.map propertyToElementDeclaration();
+}
+
+mapping UML2::Property::propertyToSimpleParticle(): XSD::Particle{
+	minOccurs := self.lower;
+	maxOccurs := self.upper;
+	elementDeclaration := self.map propertyToSimpleElementDeclaration();
+}
+
+mapping UML2::Property::propertyToElementDeclaration(): XSD::ElementDeclaration 
+{
+	name := self.name;
+	typeDefinition := self.type.resolveone(ComplexTypeDefinition);
+}
+
+mapping UML2::Property::propertyToQNameAttributeUse(): XSD::AttributeUse{
+	required := self.lower > 0;
+	attributeDeclaration := self.map propertyToQNameAttribute();
+}
+
+mapping UML2::Property::propertyToQNameAttribute(): XSD::AttributeDeclaration{
+	name := self.name;
+	typeDefinition := getDataTypeByName(self.owner.owner[UML2::Package]->asSequence()->at(1), "xsd:QName");
+}
+
+mapping UML2::Property::propertyToSimpleElementDeclaration(): XSD::ElementDeclaration{
+	name := self.name;
+	typeDefinition := getDataTypeByName(self.owner.owner[UML2::Package]->asSequence()->at(1), self.type.name);
+}
+
+mapping UML2::Property::propertyToQNameParticle(): XSD::Particle{
+	minOccurs := self.lower;
+	maxOccurs := self.upper;
+	elementDeclaration := self.map propertyToQNameElementDeclaration();
+}
+
+mapping UML2::Property::propertyToQNameElementDeclaration(): XSD::ElementDeclaration
+{
+	name := self.name;
+	typeDefinition := getDataTypeByName(self.owner.owner[UML2::Package]->asSequence()->at(1), "xsd:QName");
+}
+
+mapping UML2::Class::extensionDefinitionToElementGroup(p:UML2::Package) : XSD::ModelGroupDefinition
+	when {not self.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined();}
+{
+	name := self.name;
+	
+	modelGroup := object ModelGroup {
+		compositor := "sequence";
+		particles  := self.attribute->map propertyToSimpleParticle()->asSet();
+	};
+	
+	self.allParents().attribute->forEach(a){
+		modelGroup.particles += getNewSimpleParticle(a);
+	};
+	
+	//Create properties for composite associations
+	modelGroup.particles += p.ownedElement[UML2::Association]->select(a |
+		a.relatedElement->includes(self) 
+	).memberEnd->select(me | 
+		me.type != self and
+		me.isComposite and
+		(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty()) 
+	)->map propertyToParticle();
+	
+	//Create properties for shared associations	that CANNOT be represented by attributes
+	modelGroup.particles += p.ownedElement[UML2::Association]->select(a |
+		a.relatedElement->includes(self) 
+	).memberEnd->select(me |  
+		me.type != self and 
+		(not me.isComposite) and
+		(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty())
+	)->map propertyToQNameParticle();
+	
+	self.allParents()->forEach(pa){
+		//Create properties for composite associations
+		modelGroup.particles += p.ownedElement[UML2::Association]->select(a |
+			a.relatedElement->includes(pa) 
+		).memberEnd->select(me | 
+			me.type != pa and
+			me.isComposite and
+			(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty()) 
+		)->forEach(at){
+			modelGroup.particles += getNewParticle(at);
+		};
+		
+		//Create properties for shared associations	that CANNOT be represented by attributes
+		modelGroup.particles += p.ownedElement[UML2::Association]->select(a |
+			a.relatedElement->includes(pa) 
+		).memberEnd->select(me |  
+			me.type != pa and 
+			(not me.isComposite) and
+			(me.association.navigableOwnedEnd->includes(me) or me.association.navigableOwnedEnd->isEmpty())
+		)->forEach(at){
+			modelGroup.particles += getNewParticle(at);
+		};
+	};
+}
+
+query getNewParticle(a:UML2::Property) : XSD::Particle{
+	var part := object Particle {
+		minOccurs := a.lower;
+		maxOccurs := a.upper;
+		elementDeclaration := object ElementDeclaration{
+			name := a.name;
+			typeDefinition := a.type.resolveone(ComplexTypeDefinition);
+		};
+	}; 
+	
+	return part;
+}
+
+query getNewSimpleParticle(a:UML2::Property) : XSD::Particle{
+	var part := object Particle {
+		minOccurs := a.lower;
+		maxOccurs := a.upper;
+		elementDeclaration := object ElementDeclaration{
+			name := a.name;
+			typeDefinition := getDataTypeByName(a.owner.owner[UML2::Package]->asSequence()->at(1), a.type.name);
+		};
+	}; 
+	
+	return part;
+}

@@ -1,0 +1,8 @@
+		<xsd:group id="<c:get select="$modelGroup/@name" />" name="<c:get select="$modelGroup/@name" />">
+		  <xsd:sequence>
+		  	<c:iterate select="$modelGroup/modelGroup/particles" var="element">
+		  		<xsd:element name="<c:get select="$element/elementDeclaration/@name"/>" type="<c:get select="$element/elementDeclaration/typeDefinition/@name"/>" minOccurs="<c:get select="$element/@minOccurs"/>" maxOccurs="<c:get select="$element/@maxOccurs"/>"/>
+		  	</c:iterate>
+		  </xsd:sequence>
+		</xsd:group>
+

@@ -1,0 +1,6 @@
+			<c:iterate select="$attributeUses" var="a">
+				<xsd:attribute name="<c:get select="$a/attributeDeclaration/@name" />" type="<c:get select="$a/attributeDeclaration/typeDefinition/@name" />" <c:choose>	
+					<c:when test="$a/required">use="required"</c:when>
+					</c:choose>/>
+			</c:iterate>
+

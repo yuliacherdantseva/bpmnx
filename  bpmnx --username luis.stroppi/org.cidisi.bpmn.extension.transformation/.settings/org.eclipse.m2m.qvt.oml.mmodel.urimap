@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
+  <mapping sourceURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" targetURI="platform:/resource/org.eclipse.bpmn2/model/BPMN20.ecore"/>
+  <mapping sourceURI="http://xmlschema/1.0" targetURI="platform:/resource/org.cidisi.bpmn.extension.transformation/model/XMLSchema.ecore"/>
+</uriMap:MappingContainer>

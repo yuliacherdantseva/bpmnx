@@ -1,0 +1,6 @@
+#lun feb 14 16:35:15 GFT 2011
+eclipse.preferences.version=1
+org.eclipse.jet.compiledTemplatePackage=org.cidisi.bpmn.extension.modeltocode.compiled
+org.eclipse.jet.compiledTemplateSrcDir=jet2java
+org.eclipse.jet.projectPrefs=true
+org.eclipse.jet.useJava5=true
