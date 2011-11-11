@@ -1,0 +1,10 @@
+#Getting Started
+
+
+Instructions:
+
+* Download Eclipse MDT versions 3.5 (Galileo) or 3.7 (Indigo)
+* Install JET, Operational QVT and OCL
+* Install UML2 Tools (The update site for Eclipse 3.7 is available in the Downlads page).
+* Copy the BPMN+X plugins (Available on the Downloads page) into the plugins directory of Eclipse.
+* Open the workspace provided on the Downloads page.
