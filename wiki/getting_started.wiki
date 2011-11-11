@@ -1,7 +1,7 @@
-#Getting Started
+=Getting Started=
 
 
-Instructions:
+==Instructions ==
 
   * Download Eclipse MDT versions 3.5 (Galileo) or 3.7 (Indigo)
   * Install JET, Operational QVT and OCL
