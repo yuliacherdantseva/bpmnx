@@ -27,6 +27,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/scope"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/valueConstraint"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XMLSchema.ecore#//ElementDeclaration/typeDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//ElementDeclaration/externalTypeName"/>
     </genClasses>
     <genClasses ecoreClass="XMLSchema.ecore#//SimpleTypeDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XMLSchema.ecore#//SimpleTypeDefinition/facets"/>

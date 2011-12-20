@@ -121,6 +121,7 @@ mapping UML2::Property::propertyToElementDeclaration(): XSD::ElementDeclaration
 {
 	name := self.name;
 	typeDefinition := self.type.resolveone(ComplexTypeDefinition);
+	externalTypeName := self.type.name;
 }
 
 mapping UML2::Property::propertyToQNameAttributeUse(): XSD::AttributeUse{
