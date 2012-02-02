@@ -9,4 +9,4 @@
   * Copy the BPMN+X plugins (Available on the Downloads page) into the plugins directory of Eclipse.
   * Open the workspace provided on the Downloads page.
 
-Further Details can be found [https://docs.google.com/document/pub?id=1nEL198ka-T0n-wBGAnssWpSuH-2TEJ45BvXHAOK0nvc] here
+Further Details can be found here: [https://docs.google.com/document/pub?id=1nEL198ka-T0n-wBGAnssWpSuH-2TEJ45BvXHAOK0nvc]
