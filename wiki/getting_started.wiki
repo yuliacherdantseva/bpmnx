@@ -8,3 +8,5 @@
   * Install UML2 Tools (The update site for Eclipse 3.7 is available in the Downlads page).
   * Copy the BPMN+X plugins (Available on the Downloads page) into the plugins directory of Eclipse.
   * Open the workspace provided on the Downloads page.
+
+Further Details can be found [https://docs.google.com/document/pub?id=1nEL198ka-T0n-wBGAnssWpSuH-2TEJ45BvXHAOK0nvc] here
