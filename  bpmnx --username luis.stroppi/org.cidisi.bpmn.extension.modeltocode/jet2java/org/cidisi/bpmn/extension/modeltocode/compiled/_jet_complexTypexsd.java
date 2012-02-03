@@ -75,24 +75,34 @@ public class _jet_complexTypexsd implements JET2Template {
                 "templates/sequence.xsd.jet", //$NON-NLS-1$
                 "particles", //$NON-NLS-1$
             } );
-    private static final TagInfo _td_c_when_8_3 = new TagInfo("c:when", //$NON-NLS-1$
-            8, 3,
+    private static final TagInfo _td_c_include_7_5 = new TagInfo("c:include", //$NON-NLS-1$
+            7, 5,
+            new String[] {
+                "template", //$NON-NLS-1$
+                "passVariables", //$NON-NLS-1$
+            },
+            new String[] {
+                "templates/attribute.xsd.jet", //$NON-NLS-1$
+                "attributeUses", //$NON-NLS-1$
+            } );
+    private static final TagInfo _td_c_when_9_3 = new TagInfo("c:when", //$NON-NLS-1$
+            9, 3,
             new String[] {
                 "test", //$NON-NLS-1$
             },
             new String[] {
                 "count($complexType/baseTypeDefinition) > 0", //$NON-NLS-1$
             } );
-    private static final TagInfo _td_c_get_10_29 = new TagInfo("c:get", //$NON-NLS-1$
-            10, 29,
+    private static final TagInfo _td_c_get_11_29 = new TagInfo("c:get", //$NON-NLS-1$
+            11, 29,
             new String[] {
                 "select", //$NON-NLS-1$
             },
             new String[] {
                 "$complexType/baseTypeDefinition/@name", //$NON-NLS-1$
             } );
-    private static final TagInfo _td_c_include_11_9 = new TagInfo("c:include", //$NON-NLS-1$
-            11, 9,
+    private static final TagInfo _td_c_include_12_9 = new TagInfo("c:include", //$NON-NLS-1$
+            12, 9,
             new String[] {
                 "template", //$NON-NLS-1$
                 "passVariables", //$NON-NLS-1$
@@ -101,8 +111,8 @@ public class _jet_complexTypexsd implements JET2Template {
                 "templates/sequence.xsd.jet", //$NON-NLS-1$
                 "particles", //$NON-NLS-1$
             } );
-    private static final TagInfo _td_c_include_17_3 = new TagInfo("c:include", //$NON-NLS-1$
-            17, 3,
+    private static final TagInfo _td_c_include_13_9 = new TagInfo("c:include", //$NON-NLS-1$
+            13, 9,
             new String[] {
                 "template", //$NON-NLS-1$
                 "passVariables", //$NON-NLS-1$
@@ -159,51 +169,54 @@ public class _jet_complexTypexsd implements JET2Template {
                 _jettag_c_include_6_5.setTagInfo(_td_c_include_6_5);
                 _jettag_c_include_6_5.doStart(context, out);
                 _jettag_c_include_6_5.doEnd();
+                RuntimeTagElement _jettag_c_include_7_5 = context.getTagFactory().createRuntimeTag(_jetns_c, "include", "c:include", _td_c_include_7_5); //$NON-NLS-1$ //$NON-NLS-2$
+                _jettag_c_include_7_5.setRuntimeParent(_jettag_c_when_5_3);
+                _jettag_c_include_7_5.setTagInfo(_td_c_include_7_5);
+                _jettag_c_include_7_5.doStart(context, out);
+                _jettag_c_include_7_5.doEnd();
                 _jettag_c_when_5_3.handleBodyContent(out);
             }
             out = _jettag_c_when_5_3_saved_out;
             _jettag_c_when_5_3.doEnd();
-            RuntimeTagElement _jettag_c_when_8_3 = context.getTagFactory().createRuntimeTag(_jetns_c, "when", "c:when", _td_c_when_8_3); //$NON-NLS-1$ //$NON-NLS-2$
-            _jettag_c_when_8_3.setRuntimeParent(_jettag_c_choose_4_3);
-            _jettag_c_when_8_3.setTagInfo(_td_c_when_8_3);
-            _jettag_c_when_8_3.doStart(context, out);
-            JET2Writer _jettag_c_when_8_3_saved_out = out;
-            while (_jettag_c_when_8_3.okToProcessBody()) {
+            RuntimeTagElement _jettag_c_when_9_3 = context.getTagFactory().createRuntimeTag(_jetns_c, "when", "c:when", _td_c_when_9_3); //$NON-NLS-1$ //$NON-NLS-2$
+            _jettag_c_when_9_3.setRuntimeParent(_jettag_c_choose_4_3);
+            _jettag_c_when_9_3.setTagInfo(_td_c_when_9_3);
+            _jettag_c_when_9_3.doStart(context, out);
+            JET2Writer _jettag_c_when_9_3_saved_out = out;
+            while (_jettag_c_when_9_3.okToProcessBody()) {
                 out = out.newNestedContentWriter();
                 out.write("\t\t\t<xsd:complexContent>");  //$NON-NLS-1$        
                 out.write(NL);         
                 out.write("    \t\t\t<xsd:extension base=\"");  //$NON-NLS-1$        
-                RuntimeTagElement _jettag_c_get_10_29 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_10_29); //$NON-NLS-1$ //$NON-NLS-2$
-                _jettag_c_get_10_29.setRuntimeParent(_jettag_c_when_8_3);
-                _jettag_c_get_10_29.setTagInfo(_td_c_get_10_29);
-                _jettag_c_get_10_29.doStart(context, out);
-                _jettag_c_get_10_29.doEnd();
+                RuntimeTagElement _jettag_c_get_11_29 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_11_29); //$NON-NLS-1$ //$NON-NLS-2$
+                _jettag_c_get_11_29.setRuntimeParent(_jettag_c_when_9_3);
+                _jettag_c_get_11_29.setTagInfo(_td_c_get_11_29);
+                _jettag_c_get_11_29.doStart(context, out);
+                _jettag_c_get_11_29.doEnd();
                 out.write("\">");  //$NON-NLS-1$        
                 out.write(NL);         
-                RuntimeTagElement _jettag_c_include_11_9 = context.getTagFactory().createRuntimeTag(_jetns_c, "include", "c:include", _td_c_include_11_9); //$NON-NLS-1$ //$NON-NLS-2$
-                _jettag_c_include_11_9.setRuntimeParent(_jettag_c_when_8_3);
-                _jettag_c_include_11_9.setTagInfo(_td_c_include_11_9);
-                _jettag_c_include_11_9.doStart(context, out);
-                _jettag_c_include_11_9.doEnd();
+                RuntimeTagElement _jettag_c_include_12_9 = context.getTagFactory().createRuntimeTag(_jetns_c, "include", "c:include", _td_c_include_12_9); //$NON-NLS-1$ //$NON-NLS-2$
+                _jettag_c_include_12_9.setRuntimeParent(_jettag_c_when_9_3);
+                _jettag_c_include_12_9.setTagInfo(_td_c_include_12_9);
+                _jettag_c_include_12_9.doStart(context, out);
+                _jettag_c_include_12_9.doEnd();
+                RuntimeTagElement _jettag_c_include_13_9 = context.getTagFactory().createRuntimeTag(_jetns_c, "include", "c:include", _td_c_include_13_9); //$NON-NLS-1$ //$NON-NLS-2$
+                _jettag_c_include_13_9.setRuntimeParent(_jettag_c_when_9_3);
+                _jettag_c_include_13_9.setTagInfo(_td_c_include_13_9);
+                _jettag_c_include_13_9.doStart(context, out);
+                _jettag_c_include_13_9.doEnd();
                 out.write("    \t\t\t</xsd:extension>");  //$NON-NLS-1$        
                 out.write(NL);         
                 out.write("\t\t\t</xsd:complexContent>");  //$NON-NLS-1$        
                 out.write(NL);         
-                out.write("\t\t\t\t");  //$NON-NLS-1$        
-                out.write(NL);         
-                _jettag_c_when_8_3.handleBodyContent(out);
+                _jettag_c_when_9_3.handleBodyContent(out);
             }
-            out = _jettag_c_when_8_3_saved_out;
-            _jettag_c_when_8_3.doEnd();
+            out = _jettag_c_when_9_3_saved_out;
+            _jettag_c_when_9_3.doEnd();
             _jettag_c_choose_4_3.handleBodyContent(out);
         }
         out = _jettag_c_choose_4_3_saved_out;
         _jettag_c_choose_4_3.doEnd();
-        RuntimeTagElement _jettag_c_include_17_3 = context.getTagFactory().createRuntimeTag(_jetns_c, "include", "c:include", _td_c_include_17_3); //$NON-NLS-1$ //$NON-NLS-2$
-        _jettag_c_include_17_3.setRuntimeParent(null);
-        _jettag_c_include_17_3.setTagInfo(_td_c_include_17_3);
-        _jettag_c_include_17_3.doStart(context, out);
-        _jettag_c_include_17_3.doEnd();
         out.write("\t</xsd:complexType>");  //$NON-NLS-1$        
     }
 }

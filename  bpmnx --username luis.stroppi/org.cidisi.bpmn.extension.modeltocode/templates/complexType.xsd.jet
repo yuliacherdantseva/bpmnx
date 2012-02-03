@@ -4,15 +4,15 @@
 		<c:choose>
 		<c:when test="count($complexType/baseTypeDefinition) = 0">
 				<c:include template="templates/sequence.xsd.jet" passVariables="particles" />
+				<c:include template="templates/attribute.xsd.jet" passVariables="attributeUses" />
 		</c:when>
 		<c:when test="count($complexType/baseTypeDefinition) > 0">
 			<xsd:complexContent>
     			<xsd:extension base="<c:get select="$complexType/baseTypeDefinition/@name" />">
     				<c:include template="templates/sequence.xsd.jet" passVariables="particles" />
+    				<c:include template="templates/attribute.xsd.jet" passVariables="attributeUses" />
     			</xsd:extension>
 			</xsd:complexContent>
-				
 		</c:when>
 		</c:choose>
-		<c:include template="templates/attribute.xsd.jet" passVariables="attributeUses" />
 	</xsd:complexType>

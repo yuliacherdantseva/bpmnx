@@ -1,7 +1,14 @@
 		<xsd:group id="<c:get select="$modelGroup/@name" />" name="<c:get select="$modelGroup/@name" />">
 		  <xsd:sequence>
 		  	<c:iterate select="$modelGroup/modelGroup/particles" var="element">
-		  		<xsd:element name="<c:get select="$element/elementDeclaration/@name"/>" type="<c:get select="$element/elementDeclaration/typeDefinition/@name"/>" minOccurs="<c:get select="$element/@minOccurs"/>" maxOccurs="<c:get select="$element/@maxOccurs"/>"/>
+		  		<c:choose>
+		  			<c:when test="$element/@maxOccurs = '-1'">
+		  				<xsd:element name="<c:get select="$element/elementDeclaration/@name"/>" type="<c:get select="$element/elementDeclaration/typeDefinition/@name"/>" minOccurs="<c:get select="$element/@minOccurs"/>" maxOccurs="unbounded"/>
+		  			</c:when>
+		  			<c:otherwise>
+		  				<xsd:element name="<c:get select="$element/elementDeclaration/@name"/>" type="<c:get select="$element/elementDeclaration/typeDefinition/@name"/>" minOccurs="<c:get select="$element/@minOccurs"/>" maxOccurs="<c:get select="$element/@maxOccurs"/>"/>
+		  			</c:otherwise> 
+		  		</c:choose>
 		  	</c:iterate>
 		  </xsd:sequence>
 		</xsd:group>
