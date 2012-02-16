@@ -1,14 +1,14 @@
-<c:if test="count($particles) > 0">
-	<xsd:sequence>
-		<c:iterate select="$particles" var="p">
-			<c:choose>
-				<c:when test="$p/elementDeclaration/typeDefinition/@name">
+<c:choose>	
+	<c:when test="count($particles) > 0">
+		<sequence>
+			<c:iterate select="$particles" var="p">
+				<c:if test="$p/elementDeclaration/typeDefinition/@name">
 				    <xsd:element name="<c:get select="$p/elementDeclaration/@name" />" type="<c:get select="$p/elementDeclaration/typeDefinition/@name" />"/>
-				</c:when>
-				<c:when test="$p/elementDeclaration/@externalTypeName != ''">
+				</c:if>
+				<c:if test="$p/elementDeclaration/@externalTypeName != ''">
 				    <xsd:element name="<c:get select="$p/elementDeclaration/@name" />" type="bpmn:<c:get select="$p/elementDeclaration/@externalTypeName" />"/>
-				</c:when>
-			</c:choose>
-		</c:iterate>
-	</xsd:sequence>
-</c:if>
+				</c:if>
+			</c:iterate>
+		</sequence>
+	</c:when>
+</c:choose>
