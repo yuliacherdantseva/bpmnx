@@ -15,16 +15,16 @@ public class _jet_simpleXsdToCodexsd implements JET2Template {
 
     private static final String NL = System.getProperty("line.separator"); //$NON-NLS-1$
     
-    private static final TagInfo _td_c_get_3_16 = new TagInfo("c:get", //$NON-NLS-1$
-            3, 16,
+    private static final TagInfo _td_c_get_3_9 = new TagInfo("c:get", //$NON-NLS-1$
+            3, 9,
             new String[] {
                 "select", //$NON-NLS-1$
             },
             new String[] {
                 "/Schema/@targetNamespace", //$NON-NLS-1$
             } );
-    private static final TagInfo _td_c_get_6_26 = new TagInfo("c:get", //$NON-NLS-1$
-            6, 26,
+    private static final TagInfo _td_c_get_6_19 = new TagInfo("c:get", //$NON-NLS-1$
+            6, 19,
             new String[] {
                 "select", //$NON-NLS-1$
             },
@@ -98,24 +98,24 @@ public class _jet_simpleXsdToCodexsd implements JET2Template {
         out.write(NL);         
         out.write("<xsd:schema elementFormDefault=\"qualified\" attributeFormDefault=\"unqualified\"");  //$NON-NLS-1$        
         out.write(NL);         
-        out.write("\txmlns=\"http://");  //$NON-NLS-1$        
-        RuntimeTagElement _jettag_c_get_3_16 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_3_16); //$NON-NLS-1$ //$NON-NLS-2$
-        _jettag_c_get_3_16.setRuntimeParent(null);
-        _jettag_c_get_3_16.setTagInfo(_td_c_get_3_16);
-        _jettag_c_get_3_16.doStart(context, out);
-        _jettag_c_get_3_16.doEnd();
+        out.write("\txmlns=\"");  //$NON-NLS-1$        
+        RuntimeTagElement _jettag_c_get_3_9 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_3_9); //$NON-NLS-1$ //$NON-NLS-2$
+        _jettag_c_get_3_9.setRuntimeParent(null);
+        _jettag_c_get_3_9.setTagInfo(_td_c_get_3_9);
+        _jettag_c_get_3_9.doStart(context, out);
+        _jettag_c_get_3_9.doEnd();
         out.write("\"");  //$NON-NLS-1$        
         out.write(NL);         
         out.write("\txmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"");  //$NON-NLS-1$        
         out.write(NL);         
         out.write("\txmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"");  //$NON-NLS-1$        
         out.write(NL);         
-        out.write("\ttargetNamespace=\"http://");  //$NON-NLS-1$        
-        RuntimeTagElement _jettag_c_get_6_26 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_6_26); //$NON-NLS-1$ //$NON-NLS-2$
-        _jettag_c_get_6_26.setRuntimeParent(null);
-        _jettag_c_get_6_26.setTagInfo(_td_c_get_6_26);
-        _jettag_c_get_6_26.doStart(context, out);
-        _jettag_c_get_6_26.doEnd();
+        out.write("\ttargetNamespace=\"");  //$NON-NLS-1$        
+        RuntimeTagElement _jettag_c_get_6_19 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_6_19); //$NON-NLS-1$ //$NON-NLS-2$
+        _jettag_c_get_6_19.setRuntimeParent(null);
+        _jettag_c_get_6_19.setTagInfo(_td_c_get_6_19);
+        _jettag_c_get_6_19.doStart(context, out);
+        _jettag_c_get_6_19.doEnd();
         out.write("\"");  //$NON-NLS-1$        
         out.write(NL);         
         out.write("    >");  //$NON-NLS-1$        

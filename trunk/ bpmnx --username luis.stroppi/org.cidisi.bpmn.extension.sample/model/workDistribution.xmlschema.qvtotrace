@@ -2,7 +2,7 @@
 <trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
   <traceRecords>
     <mappingOperation name="extensionModelToSchema" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/extensionModelToSchema"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionModelToSchema"/>
     </mappingOperation>
     <context>
       <context name="self" type="Package">
@@ -22,7 +22,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="extensionEnumToEnumerationTypeDefinition" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/extensionEnumToEnumerationTypeDefinition"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionEnumToEnumerationTypeDefinition"/>
     </mappingOperation>
     <context>
       <context name="self" type="Enumeration">
@@ -42,7 +42,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="literalToEnumerationValue" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/literalToEnumerationValue"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//literalToEnumerationValue"/>
     </mappingOperation>
     <context>
       <context name="self" type="EnumerationLiteral">
@@ -62,7 +62,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="literalToEnumerationValue" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/literalToEnumerationValue"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//literalToEnumerationValue"/>
     </mappingOperation>
     <context>
       <context name="self" type="EnumerationLiteral">
@@ -82,7 +82,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="extensionElementToComplexTypeDefinition" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/extensionElementToComplexTypeDefinition"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionElementToComplexTypeDefinition"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
@@ -108,7 +108,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToAttributeUse" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToAttributeUse"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeUse"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -128,7 +128,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToAttributeDeclaration" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToAttributeDeclaration"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeDeclaration"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -148,7 +148,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToAttributeUse" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToAttributeUse"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeUse"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -168,7 +168,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToAttributeDeclaration" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToAttributeDeclaration"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeDeclaration"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -188,7 +188,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="extensionDefinitionToElementGroup" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/extensionDefinitionToElementGroup"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionDefinitionToElementGroup"/>
     </mappingOperation>
     <context>
       <context name="self" type="Class">
@@ -214,7 +214,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToSimpleParticle" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToSimpleParticle"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToSimpleParticle"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -234,7 +234,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToSimpleElementDeclaration" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToSimpleElementDeclaration"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToSimpleElementDeclaration"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -254,7 +254,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToParticle" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToParticle"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToParticle"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -274,7 +274,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToElementDeclaration" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToElementDeclaration"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToElementDeclaration"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -294,7 +294,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToQNameParticle" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToQNameParticle"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToQNameParticle"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">
@@ -314,7 +314,7 @@
   </traceRecords>
   <traceRecords>
     <mappingOperation name="propertyToQNameElementDeclaration" package="umlToXSD" module="umlToXSD">
-      <runtimeMappingOperation href="qvto:/module.env#/0/propertyToQNameElementDeclaration"/>
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToQNameElementDeclaration"/>
     </mappingOperation>
     <context>
       <context name="self" type="Property">

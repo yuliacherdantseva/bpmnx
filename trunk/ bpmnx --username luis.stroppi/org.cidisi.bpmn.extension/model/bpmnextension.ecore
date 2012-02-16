@@ -8,9 +8,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -29,9 +26,6 @@
     <eOperations name="is_abstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Class.isAbstract = true"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Class.isAbstract = true"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -56,9 +50,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined()))"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined()))"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -77,9 +68,6 @@
     <eOperations name="only_has_stereotyped_enumerations" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Enumeration) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionEnum').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNEnum').oclIsUndefined()))"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Enumeration) implies not (p.getAppliedStereotype('BPMNExtension::ExtensionEnum').oclIsUndefined() and p.getAppliedStereotype('BPMNExtension::BPMNEnum').oclIsUndefined()))"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -100,9 +88,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->exists(c | not c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->exists(c | not c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -121,9 +106,6 @@
     <eOperations name="not_navigable_reference_extension_definition_elements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association) )->forAll(a | a.oclAsType(uml::Association).navigableOwnedEnd->forAll(e | e.type.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association) )->forAll(a | a.oclAsType(uml::Association).navigableOwnedEnd->forAll(e | e.type.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -144,9 +126,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association))->forAll(a | a.oclAsType(uml::Association).navigableOwnedEnd->isEmpty() implies a.oclAsType(uml::Association).relatedElement->forAll(c | c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association))->forAll(a | a.oclAsType(uml::Association).navigableOwnedEnd->isEmpty() implies a.oclAsType(uml::Association).relatedElement->forAll(c | c.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -165,9 +144,6 @@
     <eOperations name="bpmn_elements_only_reference_bpmn_elements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association))->forAll(a | a.oclAsType(uml::Association).relatedElement->exists(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined()) implies a.oclAsType(uml::Association).navigableOwnedEnd->forAll(e | not e.type.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined()) or (a.oclAsType(uml::Association).navigableOwnedEnd->isEmpty() and a.oclAsType(uml::Association).relatedElement->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())))"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->select(o | o.oclIsTypeOf(uml::Association))->forAll(a | a.oclAsType(uml::Association).relatedElement->exists(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined()) implies a.oclAsType(uml::Association).navigableOwnedEnd->forAll(e | not e.type.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined()) or (a.oclAsType(uml::Association).navigableOwnedEnd->isEmpty() and a.oclAsType(uml::Association).relatedElement->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())))"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -188,9 +164,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies p.oclAsType(uml::Class).generalization->size() &lt;= 1)"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies p.oclAsType(uml::Class).generalization->size() &lt;= 1)"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -209,9 +182,6 @@
     <eOperations name="no_extension_definition_attributes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies p.oclAsType(uml::Class).attribute->forAll(a | a.type.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Package.packagedElement->forAll(p | p.oclIsTypeOf(uml::Class) implies p.oclAsType(uml::Class).attribute->forAll(a | a.type.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined()))"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -236,9 +206,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -257,9 +224,6 @@
     <eOperations name="only_reference_bpmn_elements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Class.ownedAttribute->select(at | at.type.oclIsTypeOf(uml::Class))->forAll(a | not a.type.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Class.ownedAttribute->select(at | at.type.oclIsTypeOf(uml::Class))->forAll(a | not a.type.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -283,9 +247,6 @@
     <eOperations name="only_inherits_from_extension_elements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined())"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Class.allParents()->forAll(c | not c.getAppliedStereotype('BPMNExtension::ExtensionElement').oclIsUndefined())"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -318,9 +279,6 @@
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Dependency.client->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())"/>
       </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Dependency.client->forAll(c | not c.getAppliedStereotype('BPMNExtension::BPMNElement').oclIsUndefined())"/>
-      </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
@@ -339,9 +297,6 @@
     <eOperations name="supplier_must_be_extension_definition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
         <details key="body" value="self.base_Dependency.supplier->forAll(s | not s.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.base_Dependency.supplier->forAll(s | not s.getAppliedStereotype('BPMNExtension::ExtensionDefinition').oclIsUndefined())"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

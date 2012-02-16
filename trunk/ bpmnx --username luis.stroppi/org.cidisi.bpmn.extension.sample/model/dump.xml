@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contents targetNamespace="WorkDistribution">
     <schema:definitions name="xsd:string"/>
-    <schema:definitions name="xsd:boolean"/>
     <schema:definitions name="xsd:QName"/>
+    <schema:definitions name="xsd:boolean"/>
     <schema:definitions name="AgentType">
         <schema:values value="SYSTEM"/>
         <schema:values value="ADMINISTRATOR"/>
