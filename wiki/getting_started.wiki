@@ -40,7 +40,7 @@ Then unfold the model folder within the org.cidisi.bpmn.extension.sample project
 
 Finally, run the umlToXSD and Jet Transformations in order to produce machine-readable files representing the provided extension.
 
-[http://bpmnx.googlecode.com/svn/wiki/images/getting_started/Running Transformations.JPG]
+[http://bpmnx.googlecode.com/svn/wiki/images/getting_started/Running%20Transformations.JPG]
 
 *Figure 5. Running the transformations*
 
