@@ -1,12 +1,72 @@
 =Getting Started=
 
 
-==Instructions ==
+==Download Eclipse ==
 
-  * Download Eclipse MDT versions 3.5 (Galileo) or 3.7 (Indigo)
-  * Install JET, Operational QVT and OCL
-  * Install UML2 Tools (The update site for Eclipse 3.7 is available in the Downlads page).
-  * Copy the BPMN+X plugins (Available on the Downloads page) into the plugins directory of Eclipse.
-  * Open the workspace provided on the Downloads page.
+The first thing that you need in order to create a BPMN extension by using BPMN+X is a copy of Eclipse Modeling Tools. In this tutorial, we will use Eclipse Indigo. Download it by clicking here and unzip it in a folder of your choice.
 
-Further Details can be found here: [https://docs.google.com/document/pub?id=1nEL198ka-T0n-wBGAnssWpSuH-2TEJ45BvXHAOK0nvc]
+==Install Dependencies==
+Run eclipse, leave the workspace name as is and click Ok.
+After that, go to Help -> Install Modeling Components. The window shown in Figure 1 will be displayed. Select the Jet, Operational QVT and OCL Tools Components and click Finish.
+
+[bpmnx.googlecode.com/svn/wiki/images/getting_started/InstallComponents.JPG]
+
+*Figure 1. Eclipse Modeling components.*
+
+When prompted, select all the items shown to be installed. Then click Next twice, accept the terms and click Finish. Click Restart Now once the components are downloaded and installed.
+
+Then, download the UML2Tools [http://bpmnx.googlecode.com/files/mdt-uml2tools-Update-incubation-I201103290512.zip] update site. Open the eclipse window and select Help -> Install New Software.  Click Add and then Archive and select the file you have just downloaded and click OK.
+
+[bpmnx.googlecode.com/svn/wiki/images/getting_started/InstallUML2Tools.JPG]
+
+*Figure 2: Opening the UML2Tools Update Site.*
+
+Then select all the items shown to be installed, click Next twice, accept the terms and click Finish. Click Ok if any Warning is displayed. Finally, restart Eclipse.
+
+[bpmnx.googlecode.com/svn/wiki/images/getting_started/SelectUML2Tools.JPG]
+
+*Figure 3: Selecting items to be installed.*
+
+==Install BPMN+X plugins==
+The BPMN+X plugins are available here [http://bpmnx.googlecode.com/files/bpmnx_plugins_v1.zip]. Download and unzip them. Copy the four jar files you have just unzipped to the *path_to_eclipse/eclipse/plugins* folder and restart eclipse.
+
+==Try the sample projects==
+Download the Sample Workspace [[http://bpmnx.googlecode.com/files/workspace_v2.zip]] and unzip the file. In the Eclipse ide, click File -> Switch Workspace -> Other and Browse the folder you have just unzipped.
+Then unfold the model folder within the org.cidisi.bpmn.extension.sample project. Open workDistribution.umlclass to see the sample BPMN+X model provided.
+
+[bpmnx.googlecode.com/svn/wiki/images/getting_started/OpenBPMNX.JPG]
+
+*Figure 4: Browsing the BPMN+X model.*
+
+Finally, run the umlToXSD and Jet Transformations in order to produce machine-readable files representing the provided extension.
+
+[bpmnx.googlecode.com/svn/wiki/images/getting_started/Running Transformations.JPG]
+
+*Figure 5. Running the transformations*
+
+The files produced by the umlToXSD transformation are:
+
+    *  workDistribution.xmlschema
+
+    *  workDistribution.xmlschema.qvtotrace
+
+
+
+The files produced by the Jet Transformation are
+
+    *  WorkDistribution.xsd
+    
+    *  dump.xml
+
+
+The Jet transformation also copies the files defining the BPMN interchange format to the output folder:
+
+    *  BPMN20.xsd
+    
+    *  BPMNDI.xsd
+
+    *  DC.xsd
+
+    *  DI.xsd
+
+    *  Semantic.xsd
