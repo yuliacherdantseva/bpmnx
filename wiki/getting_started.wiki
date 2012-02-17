@@ -28,7 +28,7 @@ Then select all the items shown to be installed, click Next twice, accept the te
 *Figure 3: Selecting items to be installed.*
 
 ==Install BPMN+X plugins==
-The BPMN+X plugins are available here [http://bpmnx.googlecode.com/files/bpmnx_plugins_v2.zip]. Download and unzip them. Copy the four jar files you have just unzipped to the *path_to_eclipse/eclipse/plugins* folder and restart eclipse.
+The BPMN+X plugins are available here [http://bpmnx.googlecode.com/files/plugins_v3.zip]. Download and unzip them. Copy the four jar files you have just unzipped to the *path_to_eclipse/eclipse/plugins* folder and restart eclipse.
 
 ==Try the sample projects==
 Download the Sample Workspace [http://bpmnx.googlecode.com/files/workspace_v3.zip] and unzip the file. In the Eclipse ide, click File -> Switch Workspace -> Other and Browse the folder you have just unzipped.
