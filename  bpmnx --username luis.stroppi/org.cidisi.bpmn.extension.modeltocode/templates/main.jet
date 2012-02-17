@@ -26,13 +26,14 @@ such as ws:file, ws:folder and ws:project
    the case of non-XML input models, the dump may look quite different.
 --%>
 
-<ws:copyFile src="resources/BPMN20.xsd" target="{$org.eclipse.jet.resource.project.name}/model/BPMN20.xsd" binary="false"/>
-<ws:copyFile src="resources/BPMNDI.xsd" target="{$org.eclipse.jet.resource.project.name}/model/BPMNDI.xsd" binary="false"/>
-<ws:copyFile src="resources/DI.xsd" target="{$org.eclipse.jet.resource.project.name}/model/DI.xsd" binary="false"/>
-<ws:copyFile src="resources/DC.xsd" target="{$org.eclipse.jet.resource.project.name}/model/DC.xsd" binary="false"/>
-<ws:copyFile src="resources/Semantic.xsd" target="{$org.eclipse.jet.resource.project.name}/model/Semantic.xsd" binary="false"/>
+<ws:copyFile src="resources/DI.xsd" target="{$org.eclipse.jet.resource.project.name}/schema/DI.xsd" binary="false"/>
+<ws:copyFile src="resources/BPMN20.xsd" target="{$org.eclipse.jet.resource.project.name}/schema/BPMN20.xsd" binary="false"/>
+<ws:copyFile src="resources/BPMNDI.xsd" target="{$org.eclipse.jet.resource.project.name}/schema/BPMNDI.xsd" binary="false"/>
+<ws:copyFile src="resources/DC.xsd" target="{$org.eclipse.jet.resource.project.name}/schema/DC.xsd" binary="false"/>
+<ws:copyFile src="resources/Semantic.xsd" target="{$org.eclipse.jet.resource.project.name}/schema/Semantic.xsd" binary="false"/>
 
-<c:setVariable select="concat($org.eclipse.jet.resource.project.name, '/model/', /Schema/@targetNamespace, '.xsd')" var="path"/>
+
+<c:setVariable select="concat($org.eclipse.jet.resource.project.name, '/schema/', /Schema/@targetNamespace, '.xsd')" var="path"/>
 <c:log>
 	<c:get select="$path"/>
 </c:log>
@@ -40,7 +41,7 @@ such as ws:file, ws:folder and ws:project
 <ws:file template="templates/simpleXsdToCode.xsd.jet" path="{$path}"/>
 
 <c:if test="isVariableDefined('org.eclipse.jet.resource.project.name')">
-    <ws:file template="templates/dump.jet" path="{$org.eclipse.jet.resource.project.name}/model/dump.xml"/>
+    <ws:file template="templates/dump.jet" path="{$org.eclipse.jet.resource.project.name}/schema/dump.xml"/>
 </c:if>
 
 <ws:rebuildWorkspace/>
