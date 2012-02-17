@@ -31,7 +31,7 @@ Then select all the items shown to be installed, click Next twice, accept the te
 The BPMN+X plugins are available here [http://bpmnx.googlecode.com/files/plugins_v3.zip]. Download and unzip them. Copy the four jar files you have just unzipped to the *path_to_eclipse/eclipse/plugins* folder and restart eclipse.
 
 ==Try the sample projects==
-Download the Sample Workspace [http://bpmnx.googlecode.com/files/workspace_v3.zip] and unzip the file. In the Eclipse ide, click File -> Switch Workspace -> Other and Browse the folder you have just unzipped.
+Download the Sample Workspace [http://bpmnx.googlecode.com/files/workspace_v4.zip] and unzip the file. In the Eclipse ide, click File -> Switch Workspace -> Other and Browse the folder you have just unzipped.
 Then unfold the model folder within the org.cidisi.bpmn.extension.sample project. Open workDistribution.umlclass to see the sample BPMN+X model provided.
 
 [http://bpmnx.googlecode.com/svn/wiki/images/getting_started/OpenBPMNX.JPG]
