@@ -33,7 +33,7 @@ such as ws:file, ws:folder and ws:project
 <ws:copyFile src="resources/Semantic.xsd" target="{$org.eclipse.jet.resource.project.name}/schema/Semantic.xsd" binary="false"/>
 
 
-<c:setVariable select="concat($org.eclipse.jet.resource.project.name, '/schema/', /Schema/@targetNamespace, '.xsd')" var="path"/>
+<c:setVariable select="concat($org.eclipse.jet.resource.project.name, '/schema/', $org.eclipse.jet.resource.fileName, '.xsd')" var="path"/>
 <c:log>
 	<c:get select="$path"/>
 </c:log>
