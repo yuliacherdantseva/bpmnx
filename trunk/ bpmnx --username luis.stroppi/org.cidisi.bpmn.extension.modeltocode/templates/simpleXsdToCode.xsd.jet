@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
-	xmlns="http://<c:get select="/Schema/@targetNamespace"/>"
+	xmlns="<c:get select="/Schema/@targetNamespace"/>"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
-	targetNamespace="http://<c:get select="/Schema/@targetNamespace"/>"
+	targetNamespace="<c:get select="/Schema/@targetNamespace"/>"
     >
 
 <xsd:import namespace="http://www.omg.org/spec/BPMN/20100524/MODEL" schemaLocation="BPMN20.xsd"/>

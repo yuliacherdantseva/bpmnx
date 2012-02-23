@@ -12,8 +12,14 @@ main() {
 mapping UML2::Package::extensionModelToSchema(): XSD::Schema
 when {not self.getAppliedStereotype('BPMNExtension::ExtensionModel').oclIsUndefined();} 
 {
+	var tnsA :String := self.name.substringBefore(".");
+	var tnsB :String := self.name.substringAfter(".").substringBefore(".");
+	var tnsC :String := self.name.substringAfter(".").substringAfter(".");
 	
-	targetNamespace := self.name;
+	tnsC := tnsC.replace(".", "/");	
+	
+	
+	targetNamespace := "http://www."+tnsB+"."+tnsA+"/"+tnsC;
 	
 	//Transform the types defined in the input model.
 	definitions	 := getDatatypeDefinitions(self);

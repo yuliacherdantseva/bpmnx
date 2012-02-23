@@ -93,7 +93,7 @@ public class _jet_main implements JET2Template {
                 "var", //$NON-NLS-1$
             },
             new String[] {
-                "concat($org.eclipse.jet.resource.project.name, '/schema/', /Schema/@targetNamespace, '.xsd')", //$NON-NLS-1$
+                "concat($org.eclipse.jet.resource.project.name, '/schema/', $org.eclipse.jet.resource.fileName, '.xsd')", //$NON-NLS-1$
                 "path", //$NON-NLS-1$
             } );
     private static final TagInfo _td_c_log_37_1 = new TagInfo("c:log", //$NON-NLS-1$
