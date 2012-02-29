@@ -27,7 +27,7 @@ Then select all the items shown to be installed, click Next twice, accept the te
 
 *Figure 3: Selecting items to be installed.*
 
-Once Eclipse starts, select Help -> Install New Software. In the Work With drop down, select _Indigo - http://download.eclipse.org/releases/indigo/_. Then, check the _Web, XML, Java EE and OSGi Enterprise Development_ 
+Once Eclipse starts, select Help -> Install New Software. In the Work With drop down, select _Indigo-http://download.eclipse.org/releases/indigo/_. Then, check the _Web, XML, Java EE and OSGi Enterprise Development_ 
 , click Next twice, accept the terms, click Finish and restart Eclipse again.
 
 ==Install BPMN+X plugins==
