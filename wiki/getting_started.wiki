@@ -3,7 +3,7 @@
 
 ==Download Eclipse ==
 
-The first thing that you need in order to create a BPMN extension by using BPMN+X is a copy of Eclipse Modeling Tools. In this tutorial, we will use Eclipse Indigo. Download it by clicking here [http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/indigo/SR2/eclipse-modeling-indigo-SR2-win32.zip&url=http://espelhos.edugraf.ufsc.br/eclipse//technology/epp/downloads/release/indigo/SR2/eclipse-modeling-indigo-SR2-win32.zip&mirror_id=575] and unzip it in a folder of your choice.
+The first thing that you need in order to create a BPMN extension by using BPMN+X is a copy of Eclipse Modeling Tools. In this tutorial, we will use Eclipse Indigo. Download it by clicking [http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/indigo/SR2/eclipse-modeling-indigo-SR2-win32.zip&url=http://espelhos.edugraf.ufsc.br/eclipse//technology/epp/downloads/release/indigo/SR2/eclipse-modeling-indigo-SR2-win32.zip&mirror_id=575 here] and unzip it in a folder of your choice.
 
 ==Install Dependencies==
 Run eclipse, leave the workspace name as is and click Ok.
