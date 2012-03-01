@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="extensionModelToSchema" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionModelToSchema"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Package">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_T9-wUGqmEeC3oobOh_YqRA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Schema">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#/"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="extensionEnumToEnumerationTypeDefinition" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionEnumToEnumerationTypeDefinition"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Enumeration">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_Y0hjYH_tEeCLIP0NzaxGzQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="EnumerationTypeDefinition">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="literalToEnumerationValue" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//literalToEnumerationValue"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="EnumerationLiteral">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_bKbDwH_tEeCLIP0NzaxGzQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="EnumerationValue">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.3/@values.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="literalToEnumerationValue" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//literalToEnumerationValue"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="EnumerationLiteral">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_cFlrgH_tEeCLIP0NzaxGzQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="EnumerationValue">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.3/@values.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="extensionElementToComplexTypeDefinition" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionElementToComplexTypeDefinition"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_gC4soGqmEeC3oobOh_YqRA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="p" type="Package">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_T9-wUGqmEeC3oobOh_YqRA"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ComplexTypeDefinition">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.4"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToAttributeUse" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeUse"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_7hPaEH_tEeCLIP0NzaxGzQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AttributeUse">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.4/@attributeUses.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToAttributeDeclaration" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeDeclaration"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_7hPaEH_tEeCLIP0NzaxGzQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AttributeDeclaration">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.4/@attributeUses.0/@attributeDeclaration"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToAttributeUse" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeUse"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_wSUq0NTBEeCSqaBWyiUFvA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AttributeUse">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.4/@attributeUses.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToAttributeDeclaration" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToAttributeDeclaration"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_wSUq0NTBEeCSqaBWyiUFvA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AttributeDeclaration">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.4/@attributeUses.1/@attributeDeclaration"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="extensionDefinitionToElementGroup" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//extensionDefinitionToElementGroup"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Class">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_WTDKQGqmEeC3oobOh_YqRA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="p" type="Package">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_T9-wUGqmEeC3oobOh_YqRA"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ModelGroupDefinition">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToSimpleParticle" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToSimpleParticle"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_f9VZYNTBEeCSqaBWyiUFvA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Particle">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5/@modelGroup/@particles.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToSimpleElementDeclaration" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToSimpleElementDeclaration"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_f9VZYNTBEeCSqaBWyiUFvA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="ElementDeclaration">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5/@modelGroup/@particles.0/@elementDeclaration"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToParticle" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToParticle"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_5GZvkdTBEeCSqaBWyiUFvA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Particle">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5/@modelGroup/@particles.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToElementDeclaration" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToElementDeclaration"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_5GZvkdTBEeCSqaBWyiUFvA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="ElementDeclaration">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5/@modelGroup/@particles.1/@elementDeclaration"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToQNameParticle" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToQNameParticle"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_ne_R0mqmEeC3oobOh_YqRA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Particle">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5/@modelGroup/@particles.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="propertyToQNameElementDeclaration" package="umlToXSD" module="umlToXSD">
+      <runtimeMappingOperation href="platform:/resource/org.cidisi.bpmn.extension.transformation/transforms/umlToXSD.qvtox#//propertyToQNameElementDeclaration"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Property">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.uml#_ne_R0mqmEeC3oobOh_YqRA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="ElementDeclaration">
+        <value>
+          <modelElement href="platform:/resource/org.cidisi.bpmn.extensions.samples.workdistribution/model/workDistribution.xmlschema#//@definitions.5/@modelGroup/@particles.2/@elementDeclaration"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

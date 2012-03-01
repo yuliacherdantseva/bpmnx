@@ -34,11 +34,11 @@ such as ws:file, ws:folder and ws:project
 
 
 <c:setVariable select="concat($org.eclipse.jet.resource.project.name, '/schema/', $org.eclipse.jet.resource.fileName, '.xsd')" var="path"/>
-<c:log>
-	<c:get select="$path"/>
-</c:log>
+<c:setVariable select="concat($org.eclipse.jet.resource.project.name, '/schema/', $org.eclipse.jet.resource.fileName, '_binding.xsd')" var="path_binding"/>
 
 <ws:file template="templates/simpleXsdToCode.xsd.jet" path="{$path}"/>
+
+<ws:file template="templates/extensionBinding.xsd.jet" path="{$path_binding}"/>
 
 <c:if test="isVariableDefined('org.eclipse.jet.resource.project.name')">
     <ws:file template="templates/dump.jet" path="{$org.eclipse.jet.resource.project.name}/schema/dump.xml"/>

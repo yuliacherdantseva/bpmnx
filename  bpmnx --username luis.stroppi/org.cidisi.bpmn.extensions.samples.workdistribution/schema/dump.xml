@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contents targetNamespace="http://www.cidisi.org/bpmn/extensions/samples/workdistribution">
+    <schema:definitions name="xsd:string"/>
+    <schema:definitions name="xsd:QName"/>
+    <schema:definitions name="xsd:boolean"/>
+    <schema:definitions name="AgentType">
+        <schema:values value="SYSTEM"/>
+        <schema:values value="ADMINISTRATOR"/>
+    </schema:definitions>
+    <schema:definitions name="TaskPrivilege">
+        <schema:attributeUses required="true">
+            <schema:attributeDeclaration name="name"/>
+        </schema:attributeUses>
+        <schema:attributeUses required="true">
+            <schema:attributeDeclaration name="granted"/>
+        </schema:attributeUses>
+    </schema:definitions>
+    <schema:definitions name="WorkDistribution">
+        <schema:modelGroup compositor="sequence">
+            <schema:particles minOccurs="1" maxOccurs="1">
+                <schema:elementDeclaration name="distributionAgent"/>
+            </schema:particles>
+            <schema:particles minOccurs="1" maxOccurs="-1">
+                <schema:elementDeclaration name="taskPrivileges"/>
+            </schema:particles>
+            <schema:particles maxOccurs="1">
+                <schema:elementDeclaration name="distributionTrigger"/>
+            </schema:particles>
+        </schema:modelGroup>
+    </schema:definitions>
+</contents>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="http://www.cidisi.org/bpmn/extensions/samples/workdistribution/binding"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:ext="http://www.cidisi.org/bpmn/extensions/samples/workdistribution"
+	targetNamespace="http://www.cidisi.org/bpmn/extensions/samples/workdistribution/binding"
+    >
+
+<xsd:import namespace="http://www.cidisi.org/bpmn/extensions/samples/workdistribution" schemaLocation="workDistribution.xsd"/>
+
+	<xsd:complexType name="WorkDistributionBinding">
+			<xsd:sequence>
+    			<xsd:group ref="ext:WorkDistribution"/>
+    		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
