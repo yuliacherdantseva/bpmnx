@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="<c:get select="concat(/Schema/@targetNamespace, '/binding')"/>"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:ext="<c:get select="/Schema/@targetNamespace"/>"
+	targetNamespace="<c:get select="concat(/Schema/@targetNamespace, '/binding')"/>"
+    >
+
+<xsd:import namespace="<c:get select="/Schema/@targetNamespace"/>" schemaLocation="<c:get select="concat($org.eclipse.jet.resource.fileName, '.xsd')" />"/>
+
+<c:iterate select="/Schema/definitions[self::ModelGroupDefinition]" var="modelGroup">
+	<c:include template="templates/extensionDefinitionBinding.xsd.jet" passVariables="modelGroup" />
+</c:iterate>
+
+</xsd:schema>

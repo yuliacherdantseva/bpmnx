@@ -96,19 +96,25 @@ public class _jet_main implements JET2Template {
                 "concat($org.eclipse.jet.resource.project.name, '/schema/', $org.eclipse.jet.resource.fileName, '.xsd')", //$NON-NLS-1$
                 "path", //$NON-NLS-1$
             } );
-    private static final TagInfo _td_c_log_37_1 = new TagInfo("c:log", //$NON-NLS-1$
+    private static final TagInfo _td_c_setVariable_37_1 = new TagInfo("c:setVariable", //$NON-NLS-1$
             37, 1,
             new String[] {
-            },
-            new String[] {
-            } );
-    private static final TagInfo _td_c_get_38_2 = new TagInfo("c:get", //$NON-NLS-1$
-            38, 2,
-            new String[] {
                 "select", //$NON-NLS-1$
+                "var", //$NON-NLS-1$
             },
             new String[] {
-                "$path", //$NON-NLS-1$
+                "concat($org.eclipse.jet.resource.project.name, '/schema/', $org.eclipse.jet.resource.fileName, '_binding.xsd')", //$NON-NLS-1$
+                "path_binding", //$NON-NLS-1$
+            } );
+    private static final TagInfo _td_ws_file_39_1 = new TagInfo("ws:file", //$NON-NLS-1$
+            39, 1,
+            new String[] {
+                "template", //$NON-NLS-1$
+                "path", //$NON-NLS-1$
+            },
+            new String[] {
+                "templates/simpleXsdToCode.xsd.jet", //$NON-NLS-1$
+                "{$path}", //$NON-NLS-1$
             } );
     private static final TagInfo _td_ws_file_41_1 = new TagInfo("ws:file", //$NON-NLS-1$
             41, 1,
@@ -117,8 +123,8 @@ public class _jet_main implements JET2Template {
                 "path", //$NON-NLS-1$
             },
             new String[] {
-                "templates/simpleXsdToCode.xsd.jet", //$NON-NLS-1$
-                "{$path}", //$NON-NLS-1$
+                "templates/extensionBinding.xsd.jet", //$NON-NLS-1$
+                "{$path_binding}", //$NON-NLS-1$
             } );
     private static final TagInfo _td_c_if_43_1 = new TagInfo("c:if", //$NON-NLS-1$
             43, 1,
@@ -213,24 +219,18 @@ public class _jet_main implements JET2Template {
         _jettag_c_setVariable_36_1.setTagInfo(_td_c_setVariable_36_1);
         _jettag_c_setVariable_36_1.doStart(context, out);
         _jettag_c_setVariable_36_1.doEnd();
-        RuntimeTagElement _jettag_c_log_37_1 = context.getTagFactory().createRuntimeTag(_jetns_c, "log", "c:log", _td_c_log_37_1); //$NON-NLS-1$ //$NON-NLS-2$
-        _jettag_c_log_37_1.setRuntimeParent(null);
-        _jettag_c_log_37_1.setTagInfo(_td_c_log_37_1);
-        _jettag_c_log_37_1.doStart(context, out);
-        JET2Writer _jettag_c_log_37_1_saved_out = out;
-        while (_jettag_c_log_37_1.okToProcessBody()) {
-            out = out.newNestedContentWriter();
-            out.write("\t");  //$NON-NLS-1$        
-            RuntimeTagElement _jettag_c_get_38_2 = context.getTagFactory().createRuntimeTag(_jetns_c, "get", "c:get", _td_c_get_38_2); //$NON-NLS-1$ //$NON-NLS-2$
-            _jettag_c_get_38_2.setRuntimeParent(_jettag_c_log_37_1);
-            _jettag_c_get_38_2.setTagInfo(_td_c_get_38_2);
-            _jettag_c_get_38_2.doStart(context, out);
-            _jettag_c_get_38_2.doEnd();
-            out.write(NL);         
-            _jettag_c_log_37_1.handleBodyContent(out);
-        }
-        out = _jettag_c_log_37_1_saved_out;
-        _jettag_c_log_37_1.doEnd();
+        RuntimeTagElement _jettag_c_setVariable_37_1 = context.getTagFactory().createRuntimeTag(_jetns_c, "setVariable", "c:setVariable", _td_c_setVariable_37_1); //$NON-NLS-1$ //$NON-NLS-2$
+        _jettag_c_setVariable_37_1.setRuntimeParent(null);
+        _jettag_c_setVariable_37_1.setTagInfo(_td_c_setVariable_37_1);
+        _jettag_c_setVariable_37_1.doStart(context, out);
+        _jettag_c_setVariable_37_1.doEnd();
+        out.write(NL);         
+        RuntimeTagElement _jettag_ws_file_39_1 = context.getTagFactory().createRuntimeTag(_jetns_ws, "file", "ws:file", _td_ws_file_39_1); //$NON-NLS-1$ //$NON-NLS-2$
+        _jettag_ws_file_39_1.setRuntimeParent(null);
+        _jettag_ws_file_39_1.setTagInfo(_td_ws_file_39_1);
+        _jettag_ws_file_39_1.doStart(context, out);
+        _jettag_ws_file_39_1.doEnd();
+        out.write(NL);         
         out.write(NL);         
         RuntimeTagElement _jettag_ws_file_41_1 = context.getTagFactory().createRuntimeTag(_jetns_ws, "file", "ws:file", _td_ws_file_41_1); //$NON-NLS-1$ //$NON-NLS-2$
         _jettag_ws_file_41_1.setRuntimeParent(null);
