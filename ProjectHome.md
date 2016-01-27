@@ -1,0 +1,3 @@
+BPMNX is a tool developed on the eclipse platform for the development of extensions to the BPMN 2.0 metamodel. The tool consists of 3 main components. A UML profile called BPMN+X, which is based on the specification of the BPMN extension mechanism. A QVT model-to-model transformation. A JET model-to-code transformation. The tool enables producing XML Schema documents that can be processed by compliant BPMN tools.
+
+This tool provides support to the concepts presented in Extending BPMN 2.0: Method and Tool Support. In: BPMN 2011: Proceedings of the 3rd International Workshop and Practitioner Day on BPMN. Information can also be found [here](http://www.slideshare.net/lstroppi/extending-bpmn2-share).
